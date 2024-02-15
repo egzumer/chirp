@@ -458,7 +458,7 @@ class UVK5RadioEgzumer(uvk5.UVK5RadioBase):
     _steps = [2.5, 5, 6.25, 10, 12.5, 25, 8.33, 0.01, 0.05, 0.1, 0.25, 0.5, 1,
               1.25, 9, 15, 20, 30, 50, 100, 125, 200, 250, 500]
 
-    upload_calibration = False
+    _upload_calibration = False
 
     @classmethod
     def k5_approve_firmware(cls, firmware):
@@ -1454,7 +1454,7 @@ class UVK5RadioEgzumer(uvk5.UVK5RadioBase):
 
         val = RadioSettingValueBoolean(False)
 
-        radio_setting = RadioSetting("upload_calibration",
+        radio_setting = RadioSetting("_upload_calibration",
                                      "Upload calibration", val)
         radio_setting.set_warning(
             _('This option may break your radio! '
